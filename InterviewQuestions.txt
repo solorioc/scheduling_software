@@ -1,0 +1,28 @@
+What You Are Doing Now
+
+What kind of system is there in place currently to keep track of and manage volunteers and schedules?
+How many volunteers are there? Do we have any idea of any increase/decrease in the number of volunteers in the near future?
+How many people volunteer regularly? Do you have a system which tracks who shows up?
+What is the primary form of communication with the volunteers? How do you contact volunteers if you need volunteers urgently?
+Are people allowed to do partial shifts?
+Have you tried other scheduling softwares before?
+How do you keep track of the information on your volunteers?
+
+What Do You Want the System to Do
+Who is the user for the software?
+Would you want volunteers to be able to change any part of the schedule (canceling appointments, changing appointments, etc. )?
+Do you want remote access?
+Do they want this on the web? (The existing website is a free hosting site)
+Ask about the nature of the system (automatic vs manual)
+Do you need a database of profiles for volunteers?
+What important information about the volunteers do you want on it? (phone #, address, email,...)
+People’s credentials and to what extent they matter in scheduling (i.e. CPR, first-aid, distance from shelter)
+What should the user interface look like?
+If we think there is existing software that could do part of this job, do you have any budgetary restrictions for that situation?
+
+What Can We Do to Help
+How often do you want to be in contact throughout this process? What is the best way of doing this (in person, over the phone, via email, snapchat, etc.)
+How would we be able to volunteer at the shelter? 
+
+
+
