@@ -1,0 +1,79 @@
+What You Are Doing Now
+
+ 
+What kind of system is there in place currently to keep track of and manage volunteers and schedules?
+Excel spreadsheets on Google sheets.
+Sheet on what each volunteer can do
+
+How many volunteers are there? Do we have any idea of any increase/decrease in the number of volunteers in the near future?
+Around 80 volunteers
+Steady 60-90
+ 
+How many people volunteer regularly? Do you have a system which tracks who shows up?
+Couldn’t tell
+50-60 volunteer monthly
+Try to keep track of unreliable (all in her head)
+ 
+What is the primary form of communication with the volunteers? How do you contact volunteers if you need volunteers urgently?
+Call off. Some don’t have email addresses.
+Group email to everybody and go through list in her head and send texts
+ 
+Are people allowed to do partial shifts?
+Only full block shifts
+ 
+Have you tried other scheduling software before?
+Just the Excel sheets
+ 
+How do you keep track of the information on your volunteers?
+Excel spreadsheet: two
+-       volunteer roster with contact details
+-       preferences for what schedule they prefer
+Would like to keep track of distance from their addresses
+ 
+ 
+ 
+What Do You Want the System to Do
+
+Who is the user for the software?
+Just Mollie
+ 
+Would you want volunteers to be able to change any part of the schedule (canceling appointments, changing appointments, etc. )?
+Don’t know how many would want to check
+Maybe a reminder (email or text) 24 hours before their schedule
+ 
+Do you want remote access?
+Something cloud-like
+ 
+Do they want this on the web? (The existing website is a free hosting site)
+Mostly work from home
+ 
+Ask about the nature of the system (automatic vs manual)
+ 
+Do you need a database of profiles for volunteers?
+That would be great
+Contact information, schedule patterns, skills, etc.
+A photo(?)
+ 
+What important information about the volunteers do you want on it? (phone #, address, email,...)
+A calendar-like program that we can send to volunteers
+ 
+ 
+People’s credentials and to what extent they matter in scheduling (i.e. CPR, first-aid, distance from shelter)
+ 
+What should the user interface look like?
+Vacant shift—see who is available.
+ 
+ If we think there is existing software that could do part of this job, do you have any budgetary restrictions for that situation?
+No budget as far as she knows
+ 
+What Can We Do to Help
+
+How often do you want to be in contact throughout this process? What is the best way of doing this (in person, over the phone, via email, snapchat, etc.)
+ However much is required 
+
+How would we be able to volunteer at the shelter?
+Whenever it’s convenient for you
+Maybe on Thursday
+Survey being sent out anyway
+ 
+
