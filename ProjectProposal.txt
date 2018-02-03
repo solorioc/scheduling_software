@@ -1,0 +1,13 @@
+The Winter Sanctuary - Scheduling Software Proposal
+Meeting Date: 2/1/2018
+Met with: Mollie West, Volunteer Coordinator, Winter Sanctuary
+
+Currently at The Winter Sanctuary, Mollie West schedules 12 shelter volunteer shifts for each day using a combination of google sheets and an excel document. The google sheet is a calendar with the names of people volunteering each shift and the excel document contains information on each volunteer, particularly the shifts that they are willing to work. A lot of the details such as where volunteers live, phone numbers, preferences, etc. are simply memorized by Mollie. Our initial thoughts on what a working system could be seemed similar to what Mollie had in mind. The overall goal is to create a software that easily allows Mollie to schedule volunteers and that stores the details on each volunteer. In order to do this, we plan to build a software that can
+
+	1. Store in a database the information on each volunteer
+	2. Show the volunteers available to work a shift 
+	3. Be accessed remotely, since Mollie does a lot of work at home
+
+
+
+
