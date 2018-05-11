@@ -1,0 +1,254 @@
+1.0 Introduction:
+
+This document describes all data, functional, and behavioral requirements for the Winter Sanctuary Project.
+
+1.1 Goals and objectives:
+	The project shall facilitate the process of scheduling volunteers for the shifts. The system shall be semi-automatic; it shall give the Volunteer Coordinator the option to schedule any of the available volunteers in a specific shift, add the scheduled shift to Google Calendar, and provide profiles of all the volunteers in the system.
+
+1.2 Statement of scope:
+	We, the design team, realize the limitations of the time we have to finish this project. Hence, this section contains the main requirements of the system ranked according to their priority. Our main goal is to have a web interface that shows a full weekly calendar of volunteers. The interface should also show a list of all available volunteers for a specific shift. There shall be an option for viewing a profile that includes the information available on each volunteer. This information will  be stored in a database, which the Volunteer Coordinator can add, delete, and edit through the web interface. If time and resources allow, we will try to have the system run on an online server in order to ensure a reliable, uninterrupted function of the server. A long-term goal that we suggest adding later is to automatically send notifications to the volunteers who were scheduled for a certain shift.
+
+1.3 Software context:
+	This software is supposed to work as an aid to the Volunteer Coordinator, referred to from now on as the VC. The volunteers will contact the VC and let them know about their availability for volunteering. Then, the VC will add their information into the system, which will automatically create a profile for them. When the VC needs to schedule the shifts, they will be able to choose a volunteer from the list of available persons. The shift will be added to a Google Calendar that will be displayed on the on the webpage. 
+
+1.4 Major constraints:
+	A major concern that the team thinks might affect the system is the fact that it has only one user who has been doing their work without the system for a long time. Hence, we are concerned that the VC will not use the system as effectively as intended. Also, the computer used in the shelter is outdated, so we need to make sure to test the system on a slow computer.
+
+
+
+2.0 Data design:
+
+
+	This section includes a description of all data structures used in the system. Because of the nature of the system, the only data structure that is used is the database. 
+	The figure below outlines the structure of the database. Primary keys and respective foreign keys are underlined. In the following description, references to the names of tables and keys are written in italics. 
+Day/Slot will be in the form of a day followed by the time slot. The days (Monday through Sunday) of the week will be represented by M T W R F S U and the shifts (Morning, Evening, Overnight) will be represented by M E O, respectively. 
+Unique Volunteer IDs will be assigned to each volunteer. 
+Volunteer Shifts is a junction table and will hold most of the important scheduling information. The Volunteer table holds most information that will be used to filter search on the webpage. 
+The two tables Volunteer Skills and All Skills hold information about the skills (CPR certified for example ) that some volunteer have or don’t, skills which may be useful to particular shifts.
+	
+	
+Fig 1: The structure of the tables and their connections in crow’s feet notation
+3.0 Architectural and component-level design:
+
+	This section includes a description of the system architecture.
+ 
+
+
+
+
+Components
+Function
+Description of function
+Web Interface
+displayAll
+Input: 
+Output: 
+Operation: Displays a list of all volunteers
+Exceptions: 
+
+
+
+displayDay
+Input: 
+Output: 
+Operation: Displays volunteers available on chosen Day
+Exceptions: 
+
+
+
+displayShift
+Input: 
+Output: 
+Operation: Displays volunteers available on chosen Shift
+Exceptions: 
+
+
+
+displaySide
+Input: 
+Output: 
+Operation: Displays volunteers available on chosen Side
+Exceptions: 
+
+Server
+
+
+
+
+Database
+add_entry
+Input: 
+Output: 
+Operation: Makes a new Volunteer profile
+Exceptions: 
+
+
+
+add_shifts
+Input: 
+Output: 
+Operation: Assigns a new shift to a Volunteer
+Exceptions: 
+Exceptions: 
+
+
+
+delete_entry
+Input: 
+Output: 
+Operation: Deletes a Volunteer profile
+Exceptions: 
+
+
+
+delete_shift
+Input: 
+Output: Removes a 
+Operation: 
+Exceptions: 
+
+
+
+edit_entry
+Input: 
+Output: 
+Operation: Edit information of Volunteer profile
+Exceptions: 
+
+
+
+find_gender
+Input: 
+Output: 
+Operation: Finds Volunteers in list with selected gender
+Exceptions: 
+
+
+
+find_name
+Input: 
+Output: 
+Operation: Finds Volunteers in list with selected name
+Exceptions: 
+
+
+
+find_shifts
+Input: 
+Output: 
+Operation: Finds Volunteers in list with selected shift time
+Exceptions: 
+
+
+
+get_data
+Input: 
+Output: 
+Operation: Database receives data from server
+Exceptions: 
+
+
+3.1 System Structure
+This section shows the system in terms of components. The system consists of three main components:
+
+
+Fig 2. Diagram of the main components and their subcomponents
+
+3.2.1 Description of the web interface:
+	
+The web interface will work as a user interface. It will show options of searching for a volunteer either by name or by availability for a certain shift. When a volunteer’s name is clicked on, their profile will show up on the page. The interface will also allow the user to edit and add volunteer profiles, as well as an option to show a complete list of volunteers registered in the system. Javascript will be used for the browser
+
+3.2.2 Description of the server:
+
+The server consists of a Javascript program working in the background of the web interface. The server is mainly responsible of drawing and adding data to the database. 
+
+We are currently not sure about where the server will be or how it will communicate with the other components. 
+
+3.2.2 Description of the database:
+
+A database contains a comprehensive list of volunteers; their personal information, contact methods, and skills. A detailed design of the database is available in the Data View section.
+
+4.0 User Interface Design
+
+The Volunteer Coordinator will be interacting with the system through a website. The website will connect to the database via a C++ server. The C++ server will be sued to maintain the database of user information. The main components of the website are a google calendar, a table of volunteers, and a area to display a volunteers information. 
+
+4.1.1 Screen Images
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fig 3. A drawn prototype of the website. 
+
+From the drawn prototype, a prototype website was created. This website prototype is not operational, but serves as a template for integrating future work. It was written using bootstrap, so it responds dynamically to resizing. Here’s an early prototype of that. 
+
+Fig 4. On the right-hand side is a display of the google calendar. The left-hand side will display a list of volunteers. A volunteer can be clicked and their information will be displayed  below. 
+
+4.1.2 Objects and Actions
+	The main objects are (or will be) an embedded google calendar, buttons to search volunteers based on shift criteria, a search bar to look through the list of volunteers, a list of volunteers, and the volunteers info. The component descriptions are as follows: 
+Embedded Google Calendar (left side)
+The google calendar settings here  provides an easy way to embed a calendar in a website via an iframe. It displays the events on the associated google calendar. Whenever an event is created on the calendar, the iframe will display it. You cannot create events from the embedded calendar though. 
+Volunteer Shift Criteria (left side)
+Underneath the calendar, as shown in figure 4, there are dropdown menus to search for volunteers to fill a specific shift. The criteria includes day of the week, shift, and the side of the shelter (men’s or women’s). In order to display all of the volunteers, there is a dropdown search button so search through all volunteers. 
+List of Volunteers (right side)
+There is a scrollable table on the left side of the webpage. When the user uses the volunteer shift criteria search, the list of volunteers available to work that shift is displayed here. 
+Volunteer Info
+When the user clicks on a name displayed by the list of volunteers, that volunteer’s info will be displayed in the Volunteer Info area. This will include all information from the database including name, telephone number, address, etc. 
+
+4.2 Interface Design Rules
+The rules of interface design have been incorporated in the following ways
+1 Strive for consistency.
+Terminology such as shift and volunteer are used consistently when making buttons or on-screen instructions. Search functionality is made to be consistent with how other websites would do it. The same data categories are displayed for each volunteer. 
+
+2 Enable frequent users to use shortcuts
+The user will be able to schedule a volunteer shift directly from the website instead of having to use google calendars each time. 
+3 Offer informative feedback.
+Simple feedback is given for operations such as searching volunteers or shift availability through buttons that are highlighted when hovered over and they respond to clicks. The table on the right-hand side of the screen has cells that change color when hovered over, and they will be responsive to clicks. When creating a calendar event through the website, there will be a javascript alert confirming the creation of the event. 
+4 Design dialog to yield closure.
+The process is arranged on the screen going from left to right. The first place the user will look is likely the calendar. When they see a shift is not filled, they will search for available volunteers. From there, they will select a volunteer from the list to schedule them. Finally, when the volunteer is scheduled, the user will see a javascript popup confirming the creation of the event. 
+
+5 Offer simple error handling.
+Because of the use of the dropdown menu, there is very little opportunity for the user to make a serious error. Any oddities created by the website on the google calendar can easily be edited using Google Calendar’s website. 
+6 Permit easy reversal of actions.
+The user has the ability to edit/create/delete user profiles from the webpage. These actions will be something that can be undone. 
+
+7 Support internal locus of control.
+The user has full control of what is displayed and can change anything they want via the Google Calendar. 
+
+8 Reduce short-term memory load.
+There’s very little need for short-term memory load because all of the volunteer’s information is stored in a database and all of the volunteers’ shifts are saved on a Google Calendar. 
+4.3 - Components Available
+	Bootstrap was used to create this website. It is scalable from a phone to a desktop computer and offers responsive design for buttons, search bars, etc. 
+
+
+
+5.0 Restrictions, limitations, and constraints:
+
+Mentioned earlier were the constraints of time and that of the VC possibly not using or not updating the scheduling software due to habit. Both of these make simplicity of the user interaction an important design factor.
+By using Google Calendar in our web interface we are reusing an existing application. As such, Google Calendar has limitations since we do not have access to its full code. A more generalized concern related to this is the successful integration of components in the webpage.
+The system development is based on the host-target model with the development platform (host) being Kenyon/the team’s computers and the execution platform (target) being the Winter Sanctuary computer, which we have mentioned is outdated and slower than the former ones. Though we are implementing the system on a webpage, the target computer’s limitations may cause the components’ communication to be slow, may have non-updated internet software, or may have hardware energy shortage if the system isn’t concisely developed.  Because of all these risks, testing the system on the Winter Sanctuary computer or a simulated version will be important.
+
+
+6.0 Testing Issues
+It is not possible to test the system real-time because the Winter Sanctuary closes down for the season by the end of the semester. However, several tests will be performed throughout the development process. A performance test will be conducted once the system has been integrated.
+6.1 Classes of tests
+Tests will be performed while designing and implementing the webpage and database. The search section of the webpage will be heavily tested to filter for several types of searches. Various combinations of volunteer name, availability, day/slot, skills will be tested to see if accurate information is displayed. As the current data is entered into the database, modifications through the webpage of these data/information will also be tested.
+Around the end of the semester, a release testing will be conducted by the Volunteer Coordinator to see if the requirements are met. 
+6.2 Expected software response
+It will be tested if accurate and complete data is displayed through the search section. A smooth flow of operations defined in the Use-Case diagram will be tested. This will be a subjective test. 
+The Google Calendar will not require much testing, but scheduling shifts and sending invitations will be tested once it is integrated in the webpage.
+6.3 Performance bounds
+Two things will be particularly tested: the accuracy of the database (including searching and modification of data) as well as ease of operations. 
+6.4 Identification of critical components
+The webpage integrates most, if not all, components of the system. The testing phase at the end will include testing all the features defined in the Use-Case diagram simultaneously. This includes searching, the Google Calendar, and data modification. 
+
+
+
