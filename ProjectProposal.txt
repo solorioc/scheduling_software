@@ -1,3 +1,5 @@
+The Winter Sanctuary - Scheduling Software Proposal
+
 Team Members: Elvin Shrestha, Ghada Bakbouk, Christian Solorio, and Tess Neau
 Meeting Date: 2/1/2018
 Met with: Mollie West, Volunteer Coordinator, Winter Sanctuary
@@ -6,19 +8,19 @@ Project Goals
 
 Currently at The Winter Sanctuary, Mollie West schedules 12 shelter volunteer shifts for each day using a combination of google sheets and an excel document. The google sheet is a calendar with the names of people volunteering each shift and the excel document contains information on each volunteer, particularly the shifts that they are willing to work. A lot of the details such as where volunteers live, phone numbers, preferences, etc. are simply memorized by Mollie. Our initial thoughts on what a working system could be seemed similar to what Mollie had in mind. The overall goal is to create a software that easily allows Mollie to schedule volunteers and that stores the details on each volunteer. In order to do this, our goals are to build a system that can:
 
-	1-Store in a database the information on each volunteer
-	2-Show the volunteers available to work a shift 
-	3-Be accessed remotely, since Mollie does a lot of work at home
-	4-Is easy to use and minimizes the amount of documents/programs Mollie needs to have opened
-	5-Can run without using too much CPU power, as the hardware used in the shelter may not be in good shape. 
+Store in a database the information on each volunteer
+Show the volunteers available to work on a specific day, a specific shift, and/or, a specific side (Male/Female) 
+Be accessed remotely, since Mollie does a lot of work at home
+Is easy to use and minimizes the amount of documents/programs Mollie needs to have opened
+Can run without using too much CPU power, as the hardware used in the shelter may not be in good shape. 
 
 Apart from the software goals, we also want to devote some time to volunteering at the organization. We believe that this will give us a better sense of all of the stakeholders while also allowing us to connect with the Knox County community in new ways. The work that The Winter Sanctuary does is extremely important for the homeless people in the area. Not only are they providing food and shelter, they are providing services to re-integrate their visitors into the community. 
 
 Major Functions
  
 The client wants a system that primarily serves two functions:
-	1- A scheduling software to help the Volunteer Coordinator with scheduling volunteers every week.
-	2- A database of information on all volunteers.
+ A scheduling software to help the Volunteer Coordinator with scheduling volunteers every week.
+  A database of information on all volunteers.
  
 The system will have an overview of the weekly calendar and show what shifts have been filled and what shifts are still vacant and require volunteer assignments. The system will make it easy for the Volunteer Coordinator to assign volunteers to shifts by providing information regarding their availability, preferences, distance from the shelter and reliability. Once the Volunteer Coordinator has scheduled volunteers using the system, the system will send out an email to volunteers 24 hours prior to their respective shifts. Mollie has mentioned that some people can be unreliable, but she cannot find any patterns since she keeps this type of information in her head. The system will keep track of volunteers who have, in the past, been unreliable.
  
@@ -26,7 +28,7 @@ Additionally, new volunteers and their information will need to be added on the 
 
 Data Storage and Processing
 
-The system will include a profile for each volunteer. The profiles will contain data such as contact informations (phone numbers, address, email, etc.), available times, skills, and a photo. The system will also contain a tally to keep track of the frequency and reliability of each volunteer. Also, the system shall store and display the times and dates for all shifts, and show whether they are vacant or full.  
+The system will include a profile for each volunteer. The profiles will contain data such as contact informations (phone numbers, address, email, etc.), available times, approximate frequency, background check date, and special skills. Also, the system shall store and display the times and dates for all shifts, and show whether they are vacant or full.  
 
 Because the pool of volunteers is constantly changing, Mollie will need to have the ability to add and delete user profiles. There are approximately 80 active volunteers at any time. Accounting for an overflow of volunteers, we estimated that at around 2.6kb per profile for 100 volunteers would require 260kb. Accounting for the size of the system itself, we will approximately 1-2 Megabytes for the system to operate. 
 
