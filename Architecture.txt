@@ -1,0 +1,47 @@
+4+1 View of System Architecture
+
+Development View
+
+The Development View shows the system in terms of components. The system consists of three main components:
+A web interface: this will work as a user interface. It will show options of searching for a volunteer either by name or by availability for a certain shift. When a volunteer’s name is clicked on, their profile will show up on the page. The interface will also allow the user to edit and add volunteer profiles, as well as an option to show a complete list of volunteers registered in the system. Javascript will be used for the browser
+A server: the server consists of a Javascript program working in the background of the web interface. The server is mainly responsible of drawing and adding data to the database. 
+A database: it contains a comprehensive list of volunteers; their personal information, contact methods, and skills. A detailed design of the database is available in the Data View section.
+
+
+
+
+ [image is availabkle in Google Doc version]
+
+
+
+Logical View
+
+Class Diagrams
+There will be two primary classes for this software. The first is a class for individual volunteers. It contains information like their volunteer ID and name. This will be used when requesting a volunteer’s information from the database. One of the main methods of this class is FetchInfo which displays a volunteer’s information on the webpage. The next class is for individual shifts. If a shift does not have a value for both vol1 and vol2, then the shift is not filled. The FindVolunteers() method will find volunteers who could possibly fill that spot and will return a list to the webpage to choose from. The FillShift function will assign a volunteer to  vol1 or vol2 using the vol_ID attribute. 
+
+[image is availabkle in Google Doc version]
+
+
+State Diagram
+The state diagram shows how a shift can be filled. First, a user chooses a shift. Once the shift is selected, they can find volunteers that satisfy a shift’s criteria and the system returns a list from the database of possible volunteers. From there, the user is able to fill a shift using the FillShift function. This assigns a vol_ID to vol1 or vol2 so that each shift has two volunteers. 
+Data View
+
+The figure below outlines the structure of the database. Primary keys are underlined. Foreign Keys are noted with an asterisk. In the following description, references to the names of tables and keys are written in italics. 
+Day/Slot will be in the form of a day followed by the time slot. The days (Monday through Sunday) of the week will be represented by M T W R F S U and the shifts (Morning, Evening, Overnight) will be represented by M E O, respectively. 
+Unique Volunteer IDs will be assigned to each volunteer. 
+Volunteer Shifts is a junction table and will hold most of the important scheduling information. The Volunteer table holds most information that will be used to filter search on the webpage. 
+
+[image is availabkle in Google Doc version]
+
+
+Use-Case View
+
+The Volunteer Coordinator is the only actor or end-user of the system. They will use the webpage for several functions shown in the figure below. The figure shows the flow of actions they would take to complete the three functions. The diagram outlines the different functions carried out in the webpage, which will bring together most of the components of the system. No other person has direct access to the webpage.
+
+
+[image is availabkle in Google Doc version]
+
+
+Off-The-Shelf Components
+
+There are two components that we will be using that are off-the-shelf components. One is PHPMyAdmin for database management, and the other is Google Calendar for scheduling events and sending reminder emails. If we need to send text message reminders, that may be another off-the-shelf component, but that is not part of the current requirements. PHPMyAdmin will connect to the website via a JavaScript server. On the website, there will be an embedded Google Calendar. Additionally, we will integrate the Google Calendar API so that events on the Google Calendar can easily be added to the calendar by clicking on a button. 
