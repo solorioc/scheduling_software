@@ -1,0 +1,14 @@
+Winter Sanctuary Scheduling System 
+Install Instructions
+Christian Solorio, Ghada Bakbouk, Elvin Shrestha, and Tess Neau
+
+
+Clone the github repository LINK to a directory on your computer. https://github.com/solorioc/scheduling_software.git 
+Open the volunteer_schedule.html file and change the port at the end of the code to something over 9008. 
+Install the following program via the terminal
+npm install mysql
+npm install 
+npm install
+Run the command “node ScheduleAjax.js”
+Connect to the website via the url 
+
