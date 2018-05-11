@@ -1,0 +1,72 @@
+The Winter Sanctuary Scheduling Software Requirements Document
+
+Preface
+This document is meant to help guide and explain the operation of our scheduling system for The Winter Sanctuary. For the software developers, this document will offer a full history of the software development process to keep record of changes made in each version, included what was fixed and how, define user requirements, and serve as a place for all details of the system to exist. For The Winter Sanctuary Volunteer Coordinator, this document will clearly outline what the system is meant to do, explain how the system will be used, and demonstrate what data will be needed for the system’s operations. 
+
+Introduction
+The United States in 2015, according to National Alliance to End Homelessness, had a homeless population of 564,708 people. Although in recent years the homeless population has decreased, there is still a critical need to provide support for people in need of a shelter. Homelessness is a problem that is especially present in Knox county. The Winter Sanctuary’s mission statement is to “provide a seasonal, emergency shelter for the members of our community who experience homelessness, and to connect them with resources that empower them to be successful and self-sufficient.” In order to provide these services, it is integral to optimize the volunteer coordination process so that the shelter is able to provide the best service to those in need. 
+
+The system being developed for the Winter Sanctuary will be used to manage the list of volunteers. The overall goal is to create a software that easily allows the Volunteer Coordinator to schedule volunteers and that stores the details on each volunteer. In order to do this, the system will
+
+Store in a database the information on each volunteer
+Show the volunteers available to work a shift
+Allow for remote access for the Volunteer Coordinator
+Run without consuming a large amount of CPU power 
+ 
+The system will consist of two parts: a database to store the volunteer’s information and a website that the Volunteer Coordinator can access. Half of the webpage will display an embedded Google Calendar with the volunteer shifts and who is working them. The webpage will then have the option to search available volunteers for a given shift. The website will display a volunteer’s information from the database as well. 
+User Requirements Definition
+
+The system will include a webpage that incorporates primarily two services:
+A scheduling software to help the Volunteer Coordinator with scheduling volunteers every week.
+A database of information on all volunteers that can be searched and sorted using various filters designed in the system.
+ 
+The system will have an overview of the weekly calendar and show what shifts have been filled and what shifts are still vacant and require volunteer assignments. The system will make it easy for the Volunteer Coordinator to search for available volunteers by entering the date and time of a shift. Based on the parameters, the system will display a list of potential volunteers and information. Every volunteer will be linked to to their profile, where their information are store. Those information include details regarding their availability, contact details, distance from the shelter, skills, preferences, and reliability. The Volunteer Coordinator can then manually decide who to assign.
+ 
+Since the calendar is incorporated or embedded in the webpage, the Volunteer Coordinator can choose a volunteer and assign them on the calendar. Once the Volunteer Coordinator has scheduled volunteers using the system, the system will send out an email to volunteers 24 hours prior to their respective shifts.
+ 
+New volunteers and their information can be added on the database from a link that is in the same webpage. The Volunteer Coordinator can also edit the volunteers profiles. 
+Additionally, since the client does not have a powerful machine, the system shall not require much memory or power.
+
+System Requirements Specification
+Functional Requirements
+Database: A database made up of all of the volunteers’ information will be implemented. The database will allow input and output from the VC (Volunteer Coordinator). Information about each volunteer’s name, sex, address, phone number, dependability, skills, and availability will be stored into volunteer profiles -- Add function, Edit function, Delete function shall be included. A Search function will then go through this information on demand by the VC. 
+Scheduling: A weekly calendar where vacant/filled shifts will be embedded in the webpage. The VC should be able to view the calendar, and add and remove volunteers from shifts. We are planning on doing this with Google Calendar, since the VC already uses Gmail and Google Sheets and so is comfortable with the Google Apps. The webpage we will use should allow us to embed a calendar, unlike some free website hosting providers.
+Security (Login System): Only the VC has access to the software’s user functions (editing volunteers’ information, scheduling, adding/deleting from the database). We will require the user to login using an ID and a password to insure the privacy of the system. 
+Remote Access: The VC will be able to access the software remotely. Assuming the VC has internet access on their phone or at home, implementing this software on a webpage will be the easiest way to do this. 
+Non-Functional Requirements
+Budget:  Since the Winter Sanctuary is a non-profit organization, we will concentrate on optimization with minimal use of money. If the system does require the use of a budget, we will communicate and figure out with the stakeholders the preferred next move. For now we see this coming up in buying a web domain.
+CPU Power/Memory: The hardware in the shelter is not up to date and this will be taken into account in the software we use. There are approximately 80 active volunteers at any time. Accounting for an overflow of volunteers, we estimated that at around 2.6kb per profile for 100 volunteers would require 260kb. Accounting for the size of the system itself, we will approximately 1-2 Megabytes for the system to operate. Additionally, having the system online will help reduce the CPU power needed for the system to operate.
+System Architecture
+The system has primarily three tiers: the database management system (DBMS) in the server, the web server, and the client or web interface (where the user/Volunteer Coordinator interacts). The server will house the DBMS, which will include all the information of the volunteers. The client will need to provide a login authorization to access the webpage. The web server will have several components integrated in it: Google Calendar, Database Search, and Editing or Adding Database. Data will be displayed from the database to the webpage and modifications made in the volunteer information through the webpage will save on the database server. 
+
+There will be no direct relationship between Google Calendar and the Database, but information will be manually added from the Database Search to the Google Calendar, which will be displayed on the webpage. Additionally, communications will be made to volunteers using emails.  Since volunteers will be invited to the Google Calendar, there is also a link between this component of the web server and the volunteers. 
+System Models
+
+
+The client wants the VC to be the only user of the system. Hence, the user should have access to all parts of the system in case there is any maintenance required. However, the components that the user will be using on a daily basis are the ones that are designed as a user interface.   
+System Evolution
+This system is made under the assumption that it will work with Google Calendar to schedule volunteers and to send reminder emails. The part of the system that we are building is a website and database that integrates with the already existing software. One concern for the longevity of this software is how it communicates with Google Calendar. In the coming months, Google Calendar will be updated. The changes appear to be simply cosmetic, but we do not yet know if it will change how our software interfaces with it. The likelihood of this happening is likely low, as many other softwares depend on Google Calendar and they will probably try to keep backwards compatibility. 
+
+The current Shelter Coordinator has a clear vision for the software and what it will do. Of course, this may change if there is a new Shelter Coordinator. There is the possibility that the requirements may want more automation in how volunteers are scheduled. This would require an extra program to do the calculations of where to place volunteers for each shift. We will build a robust database that would contain the information necessary for this operation. Since this will be a website, there will not be any concerns about a changing hardware.
+
+Another possibility in the change of user requirements would be allowing volunteers to interact with this site. As it is currently, the only user of this site would be the Shelter Coordinator. There are a couple possibilities to what this could look like. One is that users would be able to view the volunteer schedule. This would only benefit a niche user - one who does not use Google Calendar but wants to visit the scheduling website. Essentially, the Google Calendar embedded in the web page would show the same information as one’s personal Google Calendar. The next possibility would be for users to change the hours that they prefer to work. This would require a user to log in and then manipulate information in the database. The login portion would not be problematic since the shelter coordinator will have a login. The user login would simply be an extension of that. In order for a user to change their preference of hours, there would need to be a new webpage with allowing users to do that. Most changes in user requirements would require a new webpage, but minimal changes to the database. Because of our plan for a robust database, changes should not be too hard to make. 
+
+
+
+
+
+
+
+
+Glossary
+
+
+Client: The Winter Sanctuary
+Database: A structured set of the data that holds information on volunteers (which will be constructed and stored online)
+Filled shifts: Shifts that have 2 volunteers scheduled for the men’s section and 2 for the women’s section.
+Reliability: The extent to which a volunteer is likely to show up for the shift they signed up for
+Vacant shifts: Shifts that do not have a sufficient number of volunteers.
+Volunteer: A person who volunteers at the Winter Sanctuary [ADD SPECIFIC THINGS THEY DO]
+Volunteer Coordinator: The volunteer who is responsible for scheduling volunteers for shifts in the Winter Sanctuary, currently occupied by Mollie West
+
+
