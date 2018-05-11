@@ -1,0 +1,58 @@
+Winter Sanctuary Volunteer Schedule
+Test Plan
+
+Prepared by: Christian Solorio, Ghada Bakbouk, Tess Neau, Elvin Shrestha
+
+Introduction
+
+The software shall facilitate the process of scheduling volunteers for the shifts. The system shall be semi-automatic; it shall give the Volunteer Coordinator the option to schedule any of the available volunteers in a specific shift, add the scheduled shift to Google Calendar, and provide profiles of all the volunteers in the system.
+
+Objectives of Testing
+
+Finding defects made while developing the software.
+Gaining confidence in and providing information about the requirements and the level of quality.
+To make sure that the end result meets the user requirements.
+Classes of tests
+Tests will be performed while designing and implementing the webpage and database. Unit Testing on the database will be conducted. Then, a System and Integration Testing will be conducted on the web interface, which integrates most, if not all, components of the system. 
+Around the end of the semester, a Release Testing or User Acceptance Testing will be conducted by the Volunteer Coordinator to see if the requirements are met. 
+Unit Testing (Database)
+
+Definition: A level of software testing where individual units/ components of a software are tested. The purpose is to validate that each unit of the software performs as designed.
+
+Participants: Software Team
+Methodology: 
+The structure of the database will be checked for accuracy, errors, and efficiency. It will be tested if the system identifies the primary and foreign keys of the different tables. The links between tables will be checked to ensure that information is not repeated. It will be checked that the foreign key in the Volunteer Shifts (junction table) is correctly linked to the primary key in the Volunteers and Shifts tables.
+Default values will be checked in each field. The following entries must be able to take null values (in case information is not available): Address, Town_city, Zip_Code, Phone_Number_1, Phone_Number_1_Type, Phone_Number_2, Phone_Number_2_Type, Email_1, Email_2, Background_Check_Date, Reliability, Other_Information.
+The following entries must always have a value: Volunteer ID (Primary Key), First_Name, Last_Name, Gender, Side.
+
+System and Integration Testing 
+(Web Interface)
+
+Definition: A level of Software Testing carried out in an integrated hardware and software environment to verify the behavior of the complete system. It is a testing conducted on a complete, integrated system to evaluate the system's compliance with its specified requirement, and to verify the interactions between the modules of a software system.
+
+
+Participants: Software Team
+Methodology: 
+The webpage integrates most, if not all, components of the system. The testing phase at the end will include testing all the features defined in the Use-Case diagram simultaneously. This includes searching, the Google Calendar, and data modification. 
+It will be tested if accurate and complete data is displayed through the search section. A smooth flow of operations defined in the Use-Case diagram will be tested. This will be a subjective test. Two things will be particularly tested: the accuracy of the database (including searching and modification of data) as well as ease of operations. 
+Browsing: This is a subjective test to see how easy it is to browse through the various shifts. We will test how easy it is to see filled and unfilled shifts. The agenda page on the Google Calendar (the default view) will show the shifts. We will also test browsing of volunteer information and judge subjectively the layout and completeness of the information displayed.
+Searching: Once an unfilled shift is discovered, we will test the flow of operations to search for a volunteer to fill that shift. The information of the shift will be filled in the search section. We will try different combinations of search options (by Shift Day, by Shift Time, by Side) to see if the search is accurate and complete. This will test the correct linkage between the database, web server and the web interface. 
+Scheduling: We will subjectively test the ease of scheduling a volunteer once the search is complete and a volunteer has been identified to fill a shift. This includes the number of steps required to enter the information from the search section to the Google Calendar will judge the ease of operation.
+Editing: We will test if information on the database can be correctly and efficiently edited from the Web Interface. This will test the correct linkage between the database, web server and the web interface. Since a volunteer can have multiple shifts, editing the Volunteer Shifts junction table will require either deleting a shift or adding a shift. This will be particularly tested by adding and deleting shifts for a given volunteer. Adding an entry (new volunteer) will also be tested by creating a trial (test) volunteer.
+The Google Calendar will not require much testing, but scheduling shifts and sending invitations will be tested once it is integrated in the webpage. The ease of operations using the Google Calendar will be judged subjectively. 
+Regarding the Login System, we will require the user to login using an ID and a password to insure the privacy of the system. Minimal testing will be done to ensure that the information in the database is secure. 
+The Volunteer Coordinator (VC) should be able to access the software remotely as well. We will test if the web interface is available to the VC on a remote device. 
+
+
+User Acceptance Testing
+
+Definition: The last phase of the software testing process. The purpose of acceptance test is to confirm that the system is ready for operational use. During acceptance test, end-users of the system compare the system to its initial requirements.
+
+
+Participants: Mollie (Volunteer Coordinator) and Software Team
+
+Methodology:
+
+It is not possible to test the system real-time because the Winter Sanctuary closes down for the season by the end of the semester. Hence, the User Acceptance Testing will be a Release Testing.
+
+We will present the final software to the Volunteer Coordinator. The VC will then test to see if her requirements are fulfilled or not. This will include redoing a test of browsing, searching, scheduling and editing as described in the System and Integration Testing section. This will mostly be a subjective test where the VC will judge the ease of operations.
