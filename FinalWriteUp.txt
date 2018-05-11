@@ -1,0 +1,22 @@
+Final Team Write-up
+Christian Solorio, Ghada Bakbouk, Elvin Shrestha, and Tess Neau
+
+
+Our team was very focused on the process which ultimately hurt us because we had not enough time for building the server program. Even though we did not finish our system, we learned a lot. For example, we learned bootstrap to make a responsive webpage. Bootstrap is commonly used in most websites built today, so having the tool to design modern websites is extremely useful. We also got to become familiar with node.js. While we did spend a significant amount of time trying to get it to work with socket.io, we eventually gave up and attempted to use ajax. We were very happy when our database, server, and web page finally all communicated with each other. It was nice having so much documentation and focus on the process at that point because it informed us how to move forward. We had to prioritize functionalities and our requirements document was extremely helpful for this. 
+
+In its current state, the system contains a comprehensive database of all of the volunteers’ information, a web page which can search through the database with or without some filters, an embedded google calendar in the web page connected to Mollie’s account, and a javascript server which connects the contact between webpage and database . We have populated the database with all the information that the Volunteer Coordinator, Mollie, provided to us. This includes 75 entries or profiles. We are still working on getting all of the requirements fulfilled. Our functional and non-functional requirements were:
+Having a database to store all of the information on the volunteers
+Add or edit new volunteer profiles to the database
+Search, with or without filters, for possible volunteers to fill in shifts
+Organize daily shifts in a calendar to keep track of shifts during the week
+Clear, simple User Interface
+Quick and robust communications between systems
+Use of minimal budget
+Use of minimal CPU power
+With the main priority requirements being 1-4. We’ve ended up just missing a couple requirements: 2 and part of 3. We’re also  not quite done with completing a reach requirement of having a secure login system and have not tackled another reach requirement which is Data Validation (ex: searching a man’s name while having a filter set to Female Side would be invalid)
+
+Therefore, we would like to continue to work on this project over the summer while The Winter Sanctuary is still in its off-season. One important implementation we would like to have would be Google Calendar API integration so that shifts can be scheduled from the website without having to open google calendar. We would also like to improve the aesthetics. There are some components that look weird, and the logo of The Winter Sanctuary is not appearing. We also have a bootstrap modal login system working but the username/password combination is not yet secure enough - they can be found in the html - and we are planning on hiding this combination in the server through use of tokens and potentially transfer the username and password token into cookies on the webpage. We are keeping the login page as a less primary priority, we want to first make sure that we have a fully functional and robust web-page without the added login system.
+
+Location of the project: https://github.com/solorioc/scheduling_software.git 
+Look into the Install Instructions Document  for more guidance on how to get the system running.
+
