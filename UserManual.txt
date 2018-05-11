@@ -1,0 +1,96 @@
+
+WINTER SANCTUARY
+SCHEDULING SOFTWARE USER MANUAL
+
+
+
+
+Software and Manual done by
+Elvin Shrestha
+Ghada Bakbouk
+Christian Solorio 
+Tess Neau
+For the Spring 2018 SCMP 348 class at Kenyon College
+
+
+
+TABLE OF CONTENTS
+Introduction
+Software Requirements
+Accessing the Webpage
+ Overview of the Webpage
+ Main Uses 
+	5.1. Searching for a Volunteer
+5.2. Scheduling a Volunteer
+		5.3. Adding/Deleting/Editing a Volunteer
+6. Troubleshooting and Contact Information
+
+
+
+
+
+
+
+
+Introduction
+This is the User Manual for the Winter Sanctuary scheduling software. In this you will find a step-by-step guide to accessing the software, which is built in to a webpage, and using it. Screenshots will be provided with instructions. 
+The Winter Sanctuary scheduling webpage has been built to help the Volunteer Coordinator organize and schedule Volunteers with the click of a few buttons. Specifically, with this webpage you can:
+Display a clear list of all Volunteers with information such as full name, gender, gender they are willing to work with, address, phone number(s), email(s), background check date, reliability, and special skill(s)
+Add/Delete/Edit Volunteer profiles
+Search through the list of Volunteers by name and/or day, shift, gender they are willing to work with 
+See which shifts already have Volunteer(s) assigned and which don’t on a calendar interface
+Assign Volunteers to shifts 
+	Because this Software is built into a webpage, you can access the page on any device which has internet, so you could even schedule Volunteers from your mobile device on the go!
+2. Software Requirements
+Computer with Internet access
+3. Accessing the Webpage
+	You can access the webpage by copying this link:
+http://cslab.kenyon.edu:9008
+And typing it (or copy/pasting) into your web browser’s address bar, which is highlighted in the image below and click Enter on the keyboard.
+
+
+
+
+You should now have this page, image to the right, on your web browser.
+This is the Scheduling Software page.
+
+
+
+
+4. Overview of the Webpage
+Now that we are on the Scheduling Webpage, here is an image to give basic descriptions of the elements on the page. 
+“Search All” option
+The drop down menu by the “Search” button has a “Search All” clickable button which displays a list of all the Volunteers, their profile information, and options to Edit the profiles (that is covered later in Section 5)
+The image to the right shows how to do this.
+
+
+The “Search All” command should then give you a resulting table as seen in the image above. You can then scroll down or up along the list, ordered by alphabetized  Last Names.
+
+5. Main Uses
+5.1. Searching for a Volunteer
+We presented the Search All option above but you can use the drop down menu to change that button into a simple “Search”. You can then use the other drop down menus or search bars, each with placeholder text of what they are capable of searching. 
+The, click Search and your search results will be filtered accordingly!
+5.2. Scheduling a Volunteer
+The Volunteer Coordinator (Mollie) can use the embedded Google Calendar on the right side of the page, beneath the search bars, to schedule volunteers directly into their own Google Calendar. 
+Click on one of the shifts such as “6:00 am F Volunteer Shift” and you will then have the option of editing this shift as to fill it with a sentence, say “Tom’s shift”.
+The Calendar visibility is flexible. On the top right of the Calendar it says “WeekMonthAgenda”. The default format is “Agenda” but you can click on “Week” or                   “Month” in order to get different displays of the Calendar.
+5.3. Adding/Deleting/Editing a Volunteer
+N/A  yet
+
+6. Troubleshooting and Contact Information
+Contact us or James P. Skon for problems of:
+Lost password (N/A yet)
+Malfunctions
+Webpage Errors
+Other
+
+Who to Contact:
+Team Members at Kenyon College:
+Elvin Shrestha (Year ‘20) : shresthae@kenyon.edu 
+Ghada Bakbouk (Year ‘20) : bakboukg@kenyon.edu 
+Christian Solorio (Year ‘18) : solorioc@kenyon.edu 
+Tess Neau (Year ‘18) : neaut@kenyon.edu 
+James P. Skon
+Professor of Scientific Computing at Kenyon College
+Phone number: (740) 427-5369
+Email: skonjp@kenyon.edu
